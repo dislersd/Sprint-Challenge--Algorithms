@@ -37,3 +37,18 @@ c)  def bunnyEars(bunnies):
 Suppose that you have an _n_-story building and plenty of eggs. Suppose also that an egg gets broken if it is thrown off floor _f_ or higher, and doesn't get broken if dropped off a floor less than floor _f_. Devise a strategy to determine the value of _f_ such that the number of dropped eggs is minimized.
 
 Write out your proposed algorithm in plain English or pseudocode and give the runtime complexity of your solution.
+
+
+- Looking for which floor the eggs are being broken when dropped
+- Goal: Find method of finding f while dropping the least amount of eggs
+- Have to drop eggs to test
+
+1) Drop an egg for every single floor until you have found f
+2) Split floors in half drop eggs from one half
+3)    
+
+n = total size of building
+x >= f = broken egg
+x < f = no broken egg
+
+
