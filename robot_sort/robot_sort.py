@@ -81,11 +81,13 @@ class SortingRobot:
         Turn on the robot's light
         """
         self._light = "ON"
+
     def set_light_off(self):
         """
         Turn off the robot's light
         """
         self._light = "OFF"
+
     def light_is_on(self):
         """
         Returns True if the robot's light is on and False otherwise.
@@ -96,8 +98,39 @@ class SortingRobot:
         """
         Sort the robot's list.
         """
-        # Fill this out
-        pass
+
+        '''
+        while robot can move right
+        move right and compare
+        if less (-1) than swap items
+        keep it moving until end
+
+        while robot can move left
+        compare items
+        if greater (1) swap items
+        keep moving until end
+
+        repeat until sorted
+        '''
+
+        while self.can_move_right():
+            if self.compare_item() == -1 or self.compare_item() is None:
+                self.swap_item()
+                self.move_right()
+            else:
+                self.move_right()
+
+        while self.can_move_left():
+            if self.compare_item() == 1:
+                self.swap_item()
+                self.move_left()
+            else:
+                self.move_left()
+
+        if self._item is not None:
+            self.sort()
+        else:
+            return
 
 
 if __name__ == "__main__":
